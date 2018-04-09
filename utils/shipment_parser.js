@@ -1,3 +1,10 @@
+/*
+
+	- A simple parser that iterates through each line in the input to construct and 
+	return a collection of Shipments
+
+*/
+
 const fs = require('fs');
 const Shipment = require('./Shipment');
 

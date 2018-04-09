@@ -1,3 +1,14 @@
+/*
+
+	- This is a cyclic graph that holds network of shipments.
+	- We use a depth-first approach to construct valid paths by traversing when:
+		1. the next shipment falls on the next day of the current shipment
+		2. the next shipment hasn't already been processed
+	- We keep track of the current path by using a stack.
+		- we push when we've successfully discovered a new valid path
+		- we pop when we've reached a city with no outgoing routes or valid paths
+*/
+
 class Graph {
 	constructor() {
 		this.adjList = new Map();
@@ -31,7 +42,7 @@ class Graph {
 		this.numberOfShipments++;
 	}
 
-	exploreRoutes() {
+	explorePaths() {
 		for(let city of this.getCities()) {
 			if(city[1].length) {
 				this.traverseDFS(city[0]);
