@@ -1,3 +1,9 @@
+# TO RUN:
+```
+node validate.js "node index.js" tests/*
+```
+
+
 # Shipment Bundling
 
 One problem that truckers face is having to find work that minimizes the number of miles they drive empty (aka _dead-heading_). Empty miles add to fuel costs, and are an opportunity cost - they could be driving that same distance hauling freight.
